@@ -1,0 +1,860 @@
+// Make sure the charset is set appropriately
+@charset "UTF-8";
+
+// This includes all of the scss global elements that are needed to work with any of the other files.
+@import "scss/variables";
+
+// scss Components
+@import
+	"scss/components/global",
+	"scss/components/grid",
+	"scss/components/visibility",
+	"scss/components/block-grid",
+	"scss/components/type",
+	"scss/components/buttons",
+	"scss/components/forms",
+	"scss/components/button-groups",
+	"scss/components/dropdown-buttons",
+	"scss/components/split-buttons",
+	"scss/components/flex-video",
+	"scss/components/section",
+	"scss/components/top-bar",
+	"scss/components/orbit",
+	"scss/components/reveal",
+	"scss/components/joyride",
+	"scss/components/clearing",
+	"scss/components/alert-boxes",
+	"scss/components/breadcrumbs",
+	"scss/components/custom-forms",
+	"scss/components/keystrokes",
+	"scss/components/labels",
+	"scss/components/inline-lists",
+	"scss/components/pagination",
+	"scss/components/panels",
+	"scss/components/pricing-tables",
+	"scss/components/progress-bars",
+	"scss/components/side-nav",
+	"scss/components/sub-nav",
+	"scss/components/switch",
+	"scss/components/magellan",
+	"scss/components/tables",
+	"scss/components/thumbs",
+	"scss/components/tooltips",
+	"scss/components/dropdown",
+	"scss/components/header",
+	"scss/components/bios",
+	"scss/components/ie";
+
+
+
+
+/* -----------------------------------------
+	 Global
+----------------------------------------- */
+.full {
+	width:100%;
+}
+
+
+
+/* -----------------------------------------
+	 Top Nav
+----------------------------------------- */
+
+.top-bar ul > li.has-dropdown a:after {
+	content: ""; display: none;
+	width: 0; height: 0;
+	border: solid 5px;
+	border-color: white transparent transparent transparent;
+	margin-right: 15px; margin-top: -2.5px;
+	position: absolute; right: 0; top: 50%;
+
+}
+
+.top-bar ul > li.has-dropdown a {
+	padding: 0px 5px !important;
+}
+
+
+
+
+/* -----------------------------------------
+	 Home Page
+----------------------------------------- */
+
+// Slider
+.hero {
+	background-color:$dark-grey;
+	position:relative;
+	height:450px;
+	overflow: hidden;
+	&.inside {
+		 height:260px;
+		.photo {
+			position: absolute;
+			left: 50%;
+			width: 1500px;
+			margin-left: -750px;
+			height:260px;
+		}
+	}
+		.slider {
+			position: absolute;
+			left: 50%;
+			width: 1500px;
+			margin-left: -750px;
+			height:450px;
+			.overlay {
+				@include transparent-gradient(rgba(0,0,0,0), rgba(0,0,0,1));
+				height: 400px;
+				z-index: 1;
+				position: absolute;
+				bottom: 0px;
+				width: 100%;
+			}
+
+
+			.bx-controls {
+				margin: 0 auto 30px auto;
+				position: absolute;
+				bottom: 130px;
+				left: 275px;
+				z-index:100;
+				cursor: $cursor-pointer-value;
+
+
+				.bx-pager-item a {
+					display: block;
+					width: 35px;
+					height: 6px;
+					background: $white;
+					float: $default-float;
+					margin-#{$opposite-direction}: 8px;
+					@include shadow;
+					float:left;
+					margin: 0 5px 0 0;
+
+					&.active {
+						background: $blue;
+					}
+
+					&:last-child { margin-#{$opposite-direction}: 0; }
+				}
+			}
+
+
+
+			ul {
+				li {
+					.row {
+						z-index: 10;
+						position:relative;
+						height:0px;
+						max-width: 68.66667em;
+					 .caption {
+							position:absolute;
+							bottom: 0;
+							padding: 10px 14px;
+							font-size: emCalc(14px);
+							&.left {
+								left:0px;
+								height:140px;
+								background-color:$white;
+								padding: 20px 35px 10px 35px;
+								h1 {
+									font-size:50px;
+									margin:15px auto;
+								}
+							}
+							&.right {
+								right:0px;
+								height:200px;
+								color: $white;
+								padding: 45px 35px;
+								@include gradient(rgba(74,69,135,1), rgba(62,199,244,1));
+								p {
+									font-size:18px;
+								}
+								.small.button {
+									p {
+									line-height: 1;
+									margin-bottom: 0px;
+										a {
+											color:$white;
+											background-color:transparent;
+											border-color:$white;
+											letter-spacing: 1px;
+											@include futura-light;
+											font-size: 15px;
+										}
+									}
+								&:hover {
+									background-color:rgba(255,255,255,0.2);
+									border-color:rgba(255,255,255,0.2);
+								}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+.row {
+	&.buckets {
+		.columns {
+			height:320px;
+			a.button {
+				position:absolute;
+				bottom:0px;
+				margin-bottom:0px;
+			}
+		}
+	}
+	&.bgimage {
+		background: url(assets/img/wireline-faded.jpg) no-repeat right;
+		padding: 0px 0 50px 0;
+			hr {
+				margin:0px;
+				padding:0px;
+			}
+			.panel.home {
+			header {
+				h1 {
+					color:$blue;
+					margin-bottom: 0;
+				}
+				p{
+					@include futura-light;
+					text-transform:uppercase;
+					font-size: 28px;
+					color:$grey;
+					margin-bottom: 20px;
+				}
+			}
+			.row {
+				 p {
+					@include futura-light;
+					color:$grey;
+					text-transform:none;
+					font-size: 19px;
+				}
+				.small.button {
+					color:$grey;
+					p {
+						line-height: 1;
+						margin-bottom: 0px;
+						a {
+							color:$grey;
+							border-color:$grey;
+							@include futura;
+							font-size: 15px;
+							text-transform:uppercase;
+						}
+
+					}
+					&:hover {
+						background-color:$blue;
+						border-color:$blue;
+					}
+					&:hover p a{
+						color:$white;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+/* -----------------------------------------
+	 Inside Page
+----------------------------------------- */
+
+.row {
+	&.inside {
+	position:relative;
+	min-height: 600px;
+		img {margin: 20px 0px;}
+		.page-title {
+			position:absolute;
+			background-color: $white;
+			height:62px;
+			top:-62px;
+			left: -20px;
+			z-index:999 ;
+			h1 {
+				padding: 30px 35px 0px 35px;
+				margin:0px;
+			}
+		}
+		aside {
+			padding: 0px;
+			.panel {
+				border:1px solid lighten($grey, 40%);
+				padding:20px;
+				ul {
+					list-style:none;
+					margin-bottom: 0px;
+				}
+				h5 {
+					color:$blue;
+				}
+				li {
+					border-top: 1px solid lighten($grey, 40%);
+					padding: 10px 0 10px 0px;
+					.vcard {
+						border:0px;
+						padding:0px;
+						li {
+							border-top: 0px;
+							padding: 0px;
+							font-size: 14px;
+							h1 {
+								font-size: 19px;
+								@include futura;
+								margin-bottom: 5px;
+								text-transform: none;
+							}
+						}
+					}
+					.small.button.grey{
+						@include futura-light;
+						font-size:15px;
+						background-color:$grey;
+						color:$white;
+						margin-bottom:0px;
+						&:hover {
+							background-color:$white;
+							color:$dark-grey;
+							border:1px solid lighten($grey, 40%);
+						}
+					}
+					&:first-child {
+						border-top:0px;
+						padding: 10px 0 30px 0px;
+					}
+					&:last-child {
+						padding: 30px 0 10px 0px;
+					}
+					&:only-child {
+						border-top:0px;
+						padding: 10px 0 10px 0px;
+					}
+					p {font-size: 14px;}
+					ul.contact-list {
+					@include futura-light;
+					margin:0px;
+					font-size:17px;
+						li {
+							list-style-type: none;
+							text-decoration: none;
+							padding: 5px 0px;
+							&:first-child {
+								margin-top:10px;
+							}
+							&:last-child {
+								margin-bottom:0px;
+							}
+						}
+					}
+				}
+
+			}
+		}
+		.columns {
+			margin: 50px 0px;
+			article {
+				section {
+					margin:30px 0px;
+				}
+				h2 {
+					color:$blue;
+					font-size:30px;
+				}
+				h3 {
+					margin-top:40px;
+					font-size:26px;
+					color:$grey;
+					text-transform:none;
+					@include futura-light;
+					margin-bottom: 5px;
+					&:after {
+						content: "—";
+						display: block;
+						font-size: 40px;
+						color:$grey;
+						margin: 0px;
+						padding: 0px;
+						text-rendering: optimizeLegibility;
+						margin-left: -5px;
+					}
+				ul {
+					list-style-position: outside;
+					padding-left: 15px;
+					li {
+						margin-bottom: 20px;
+					}
+				}
+			}
+			.row {
+				ul.feat-services {
+					list-style:none;
+					padding-left: 0px;
+					.featured-box {
+						float:left;
+						max-width: 400px;
+						&.wireline {
+							height:300px;
+						}
+						&.conv-complt {
+							height:250px;
+						}
+						&.unconv-complt {
+							height:240px;
+						}
+						.title-box {
+							position:relative;
+							width:100%;
+							height:auto;
+							margin-bottom:10px;
+							overflow:hidden;
+							.gradient-overlay{
+								position: absolute;
+								@include gradient(rgba(74,69,135,1), rgba(62,199,244,1));
+								opacity:0.6;
+								width: 100%;
+								height:100%;
+								z-index: 1;
+								top: 0px;
+							}
+							img {
+								padding:0px;
+								margin:0px;
+								width: 100%;
+								height:auto;
+							}
+							h1{
+								z-index: 10;
+								color:$white;
+								font-size:28px;
+								padding: 15px 20px;
+								bottom:0px;
+								@include text-shadow;
+								position:absolute;
+								@include futura-light;
+								margin-bottom:0px;
+							}
+						}
+						p {@include futura-light;font-size:18px;line-height: 1.3;}
+					}
+				}
+				.columns {
+					margin:0px;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/* -----------------------------------------
+	 Footer
+----------------------------------------- */
+
+footer {
+	height:75px;
+	background-color:$dark-grey;
+	color:$light-grey;
+	@include futura-light;
+	font-size:16px;
+
+	.large-12.columns {
+		margin-top:25px;
+		ul li, p {
+			@include futura-light;
+		}
+		.large-6.columns {
+			padding-left: 2em;
+			padding-right: 2em;
+		}
+		a:link {
+			color:$light-grey;
+		}
+	}
+}
+
+
+
+.row.inside .columns article {
+	ul {
+		list-style-position: outside;
+		padding-left: 15px;
+		li {
+			margin-bottom: 20px;
+		}
+	}
+}
+
+
+
+
+
+/* -----------------------------------------
+	 Media Queries 767px/1001px
+----------------------------------------- */
+
+@media only screen and (max-width: 1001px) and (min-width: 768px) {
+
+// Global Styles //
+p {font-size: 0.9em;}
+
+// Global Nav //
+header.page-header {
+	height:100px;
+	.row{
+		.top-bar {
+			height:100px;
+			&.expanded {
+				height:auto;
+			}
+			ul.title-area {
+				height:100px;
+				li.name {
+					h1 {padding-top:5px;margin-top:0px;}
+				}
+				li.toggle-topbar{
+					top: 55px;
+					@include futura;
+					a {font-size: 16px;}
+				}
+			}
+			.top-bar-section {
+				z-index:999;
+				ul {
+					background-color:$grey;
+					&.main-level {
+						margin-top: 0px;
+						li, li.has-dropdown{
+							a{
+								padding: 10px 20px !important;
+								margin-bottom: 1px;
+								font-size:18px;
+							}
+						}
+					}
+				 li{
+					ul.dropdown {
+						li a {
+							color:$white;
+						}
+					}
+					&.active a {
+						border-bottom: 0px;
+						color:$blue;
+					}
+					a{
+						background:$dark-grey;
+						color:$white;
+					}
+				 }
+				}
+			}
+		}
+	}
+}
+
+
+aside.large-3.columns  {
+	padding-right: 1em;
+}
+
+// Slider //
+.hero {
+	height: 300px;
+	.slider {
+	width:1000px;
+	margin-left: -500px;
+	height: 300px;
+		.bx-wrapper {
+			height: 300px;
+			.banner-slider{
+				height: 300px;
+				.caption{
+					&.right {
+						height:180px;
+						padding: 35px 35px;
+						p {
+							font-size: 16px;
+							margin-bottom: 12px;
+						}
+					}
+					&.left {
+
+						h1 {
+							font-size: 42px;
+						}
+					}
+				}
+			}
+			.row {
+				width:80%;
+			}
+			.bx-controls {
+				bottom: 150px;
+				left: 0px;
+				margin: 0 auto;
+				padding-left: 15%;
+			}
+		}
+	}
+}
+}
+
+
+
+
+
+
+
+/* -----------------------------------------
+	 Media Queries 767px/under
+----------------------------------------- */
+
+@media only screen and (max-width: 767px) {
+
+// Global Styles //
+p {font-size: 0.9em;line-height: 1.4;}
+hr {margin:10px 0px;display:none;}
+h2 {font-size:24px;}
+.button.small {font-size:13px;}
+
+// Global Nav //
+header.page-header {
+	height:60px;
+	.row{
+		.top-bar {
+			height:60px;
+			&.expanded {
+				height:auto;
+			}
+			ul.title-area {
+				height:60px;
+				li.name {
+					h1 {padding-top:0px;margin-top:0px;
+						a{
+							width: 92px;
+							padding: 0 10px;
+							height: 60px;
+						}
+					}
+				}
+				li.toggle-topbar{
+					top: 35px;
+					@include futura;
+					a {font-size: 16px;}
+				}
+			}
+			.top-bar-section {
+				z-index:1000;
+				ul {
+					background-color:$grey;
+					&.main-level {
+						margin-top: 0px;
+						li, li.has-dropdown{
+							a{
+								padding: 10px 20px !important;
+								margin-bottom: 1px;
+								font-size:16px;
+							}
+						}
+					}
+				 li{
+					ul.dropdown {
+						li a {
+							color:$white;
+						}
+					}
+					&.active a {
+						border-bottom: 0px;
+						color:$blue;
+					}
+					a{
+						background:$dark-grey;
+						color:$white;
+					}
+				 }
+				}
+			}
+		}
+	}
+}
+
+.row.inside .columns article section {
+	margin: 15px 0px;
+}
+
+.row.inside .columns article .row ul.feat-services .featured-box.conv-complt,
+.row.inside .columns article .row ul.feat-services .featured-box.unconv-complt,
+.row.inside .columns article .row ul.feat-services .featured-box.wireline {
+	height:auto;
+}
+
+aside.large-3.columns  {
+	padding-right: 1em;
+	padding-left: 1em;
+}
+.row.inside aside .panel hr {
+	display:block;
+}
+
+// Hero //
+.hero {
+	height: 250px;
+	&.inside{
+		height: 120px;
+		.photo {
+			width: 768px;
+			margin-left: -384px;
+		}
+	}
+	.slider {
+	width:100%;
+	margin-left: 0px;
+	height: 100%;
+	left:0px;
+		.bx-wrapper {
+			height: 100%;
+			margin: 0px;
+			.bx-viewport {
+				height:100% !important;
+				.overlay{display:none;}
+				.banner-slider {
+					height: auto;
+					li {
+						img{display:none;}
+						.row {
+							width:100%;
+							.caption.left {
+								top:0px;
+								background-color: $light-grey;
+								height:150px;
+								padding: 20px;
+								h1 {
+									font-size: 26px;
+									margin:0px;
+								}
+							}
+							.caption.right {
+								height: 130px;
+								padding: 20px 20px 15px;
+								top: 120px;
+								left: 0px;
+								p {
+									font-size: 14px;
+									margin-bottom: 10px;
+								}
+								a.button {
+									margin: 0px;
+								}
+								.small.button {
+									p {
+										margin-bottom:0px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.bx-controls {
+				bottom: 150px ;
+				left: 50%;
+				margin: 0 auto;
+				margin-left: -100px;
+				width: 200px;
+			}
+		}
+	}
+}
+
+// Home Buckets //
+.row {
+	&.inside {
+		.columns {
+			margin:20px 0px;
+			article {
+				h2{font-size:24px;}
+				h3{font-size:22px;}
+			}
+		}
+		.spacer {display:none;}
+		.form-container {width:100%}
+		.page-title {
+			position: relative;
+			background-color: $light-grey;
+			height: auto;
+			top: 0px;
+			left: 0px;
+			z-index:999;
+			h1 {padding: 15px;}
+		}
+	}
+	&.buckets {
+		.columns {
+			height: 280px;
+			padding: 15px;
+			border-bottom: 1px solid $light-grey;
+			a.button {
+				position:relative;
+			}
+		}
+		h2 {
+			margin-bottom: 0px;
+		}
+	}
+	&.bgimage {
+		background:none;
+		margin: 0px;
+		padding: 30px 0 30px 0;
+		.columns {
+			.panel.home{
+				header{
+					p{
+						line-height: 1.2;
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+}
+
+// Footer //
+footer {
+	.row {
+		.columns {
+			&.large-12 {
+				margin-top:10px;
+				p{margin-bottom:0px;}
+				.large-6.columns {
+					padding:0px;
+				}
+			}
+			ul {
+				font-size: 0.9em;
+				&.inline-list {padding:0px;margin:0px;margin-top:10px;
+					li {
+						margin-left: 0px;
+						margin-right: 10px;
+					}
+				}
+				&.right{float:none !important;}
+			}
+		}
+	}
+}
+}
+

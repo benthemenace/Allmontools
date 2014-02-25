@@ -1,0 +1,11 @@
+# humanstxt.org/
+
+# TEAM
+Pennebaker
+
+
+Standards:
+HTML5, SCSS
+
+Components:
+Foundation 4.3
