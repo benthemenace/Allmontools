@@ -21,7 +21,7 @@ $em-base: $base-font-size;
 // Various global styles
 
 $default-float: left;
-$body-bg: #8e8e8e;
+$body-bg: #D8D8D8;
 $body-font-color: #222222;
 $body-font-family: Georgia, serif;
 $body-font-weight: normal;
@@ -42,6 +42,8 @@ $grey: #58585b;
 $dark-grey: #252525;
 $color1: rgba(74,69,135,1);
 $color2: rgba(62,199,244,1);
+$transp: rgba(0,0,0,0);
+$headerblue: #006680;
 
 
 
@@ -78,9 +80,22 @@ $color2: rgba(62,199,244,1);
   }
 
 
-
-
-
+@mixin gradientreverse{
+  background: #ffffff; /* Old browsers */
+  background: -moz-linear-gradient(top, #ffffff 0%, #d8d8d8 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d8d8d8)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ffffff 0%,#d8d8d8 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ffffff 0%,#d8d8d8 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ffffff 0%,#d8d8d8 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #ffffff 0%,#d8d8d8 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8d8d8',GradientType=0 ); /* IE6-9 */
+}
+@mixin gradback{
+// needs latest Compass, add '@import "compass"' to your scss
+background-color: rgb(216,216,216); // Old browsers
+@include filter-gradient(#d8d8d8, #ffffff, vertical); // IE6-9
+@include background-image(linear-gradient(top, rgba(216,216,216,1) 0%,rgba(255,255,255,1) 100%));
+}
 @mixin shadow {
   -moz-box-shadow: 1px 1px 5px 0px $dark-grey;
   -webkit-box-shadow: 1px 1px 5px 0px $dark-grey;

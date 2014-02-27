@@ -159,7 +159,7 @@
 							&.left {
 								left:0px;
 								height:140px;
-								background-color:$white;
+								@include transparent-gradient(white,#909090);
 								padding: 20px 35px 10px 35px;
 								h1 {
 									font-size:50px;
@@ -171,7 +171,7 @@
 								height:200px;
 								color: $white;
 								padding: 45px 35px;
-								@include gradient(rgba(74,69,135,1), rgba(62,199,244,1));
+								@include transparent-gradient(#909090,white);
 								p {
 									font-size:18px;
 								}
