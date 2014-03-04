@@ -118,16 +118,16 @@
 				margin: 0 auto 30px auto;
 				position: absolute;
 				bottom: 130px;
-				left: 275px;
+				left: 300px;
 				z-index:100;
 				cursor: $cursor-pointer-value;
 
 
 				.bx-pager-item a {
 					display: block;
-					width: 35px;
-					height: 6px;
-					background: $white;
+					width: 10px;
+					height: 10px;
+					background: $light-grey;
 					float: $default-float;
 					margin-#{$opposite-direction}: 8px;
 					@include shadow;
@@ -135,7 +135,7 @@
 					margin: 0 5px 0 0;
 
 					&.active {
-						background: $blue;
+						background: $headerblue;
 					}
 
 					&:last-child { margin-#{$opposite-direction}: 0; }
@@ -157,7 +157,7 @@
 							padding: 10px 14px;
 							font-size: emCalc(14px);
 							&.left {
-								left:0px;
+								left:30px;
 								height:140px;
 								@include transparent-gradient(white,#909090);
 								padding: 20px 35px 10px 35px;
@@ -218,6 +218,9 @@
 				margin:0px;
 				padding:0px;
 			}
+			h4{
+			@include transparent-gradient(#909090,white);
+			}
 			.panel.home {
 			header {
 				h1 {
@@ -266,7 +269,6 @@
 	}
 }
 
-
 /* -----------------------------------------
 	 Inside Page
 ----------------------------------------- */
@@ -299,6 +301,9 @@
 				}
 				h5 {
 					color:$blue;
+					}
+				h4{
+				@include transparent-gradient(#909090,white);
 				}
 				li {
 					border-top: 1px solid lighten($grey, 40%);
@@ -389,6 +394,9 @@
 						text-rendering: optimizeLegibility;
 						margin-left: -5px;
 					}
+				h4{
+				@include transparent-gradient(#909090,white);
+				}
 				ul {
 					list-style-position: outside;
 					padding-left: 15px;
@@ -458,15 +466,50 @@
 	}
 }
 
+//body h4 tag, not sure where it fits in the nest up there
+h4{
+padding:35px;	
+margin-right: .15em;
+color: $headerblue;
+@include transparent-gradient(white,#909090);
+@include shadow;
+}
+h5{
+	color:$dark-grey;
+	padding: 30px 35px 0px 35px;
+}
+//p tags for the bottom of the page, padding, and left and right borders
+p.dots{
+	color:black;
+	padding:0px 35px 0px 35px;
+}
+p.left1{
+	border-right:1px dotted black;
+	padding:0px 35px 0px 35px;
+	}	
+p.right1{
+	border-left:1px dotted black;
+	padding:0px 35px 0px 35px;
+	}
+//borders around the column images here
+.mainbord{
+	border:5px solid white;
+	@include shadow;
+}
+//to cut the padding between columns on the front page
+.padclass{
+	left:.8em;
+	padding-right: .25em;
+	padding-left: .25em;
 
-
+}
 /* -----------------------------------------
 	 Footer
 ----------------------------------------- */
 
 footer {
 	height:75px;
-	background-color:$dark-grey;
+	background-color:#006680;;
 	color:$light-grey;
 	@include futura-light;
 	font-size:16px;
@@ -475,6 +518,7 @@ footer {
 		margin-top:25px;
 		ul li, p {
 			@include futura-light;
+			border:0;
 		}
 		.large-6.columns {
 			padding-left: 2em;
@@ -499,9 +543,43 @@ footer {
 }
 
 
+//body h4 tag, not sure where it fits in the nest up there
+h4{
+padding:35px;	
+margin-right: .15em;
+color: $headerblue;
+@include transparent-gradient(white,#909090);
+@include shadow;
+}
+h5{
+	color:$dark-grey;
+	padding: 30px 35px 0px 35px;
+}
+//p tags for the bottom of the page, padding, and left and right borders
+p.dots{
+	color:black;
+	padding:0px 35px 0px 35px;
+}
+p.left1{
+	border-right:1px dotted black;
+	padding:0px 35px 0px 35px;
+	}	
+p.right1{
+	border-left:1px dotted black;
+	padding:0px 35px 0px 35px;
+	}
+//borders around the column images here
+.mainbord{
+	border:5px solid white;
+	@include shadow;
+}
+//to cut the padding between columns on the front page
+.padclass{
+	left:.8em;
+	padding-right: .25em;
+	padding-left: .25em;
 
-
-
+}
 /* -----------------------------------------
 	 Media Queries 767px/1001px
 ----------------------------------------- */
@@ -612,13 +690,43 @@ aside.large-3.columns  {
 	}
 }
 }
+//body h4 tag, not sure where it fits in the nest up there
+h4{
+padding:35px;	
+margin-right: .15em;
+color: $headerblue;
+@include transparent-gradient(white,#909090);
+@include shadow;
+}
+h5{
+	color:$dark-grey;
+	padding: 30px 35px 0px 35px;
+}
+//p tags for the bottom of the page, padding, and left and right borders
+p.dots{
+	color:black;
+	padding:0px 35px 0px 35px;
+}
+p.left1{
+	border-right:1px dotted black;
+	padding:0px 35px 0px 35px;
+	}	
+p.right1{
+	border-left:1px dotted black;
+	padding:0px 35px 0px 35px;
+	}
+//borders around the column images here
+.mainbord{
+	border:5px solid white;
+	@include shadow;
+}
+//to cut the padding between columns on the front page
+.padclass{
+	left:.8em;
+	padding-right: .25em;
+	padding-left: .25em;
 
-
-
-
-
-
-
+}
 /* -----------------------------------------
 	 Media Queries 767px/under
 ----------------------------------------- */
@@ -703,8 +811,8 @@ header.page-header {
 }
 
 aside.large-3.columns  {
-	padding-right: 1em;
-	padding-left: 1em;
+	padding-right: .25em;
+	padding-left: .25em;
 }
 .row.inside aside .panel hr {
 	display:block;
@@ -788,7 +896,12 @@ aside.large-3.columns  {
 			article {
 				h2{font-size:24px;}
 				h3{font-size:22px;}
+					padding-right: .25em;
+	                padding-left: .25em;
 			}
+		}
+		h4{
+
 		}
 		.spacer {display:none;}
 		.form-container {width:100%}
@@ -807,6 +920,8 @@ aside.large-3.columns  {
 			height: 280px;
 			padding: 15px;
 			border-bottom: 1px solid $light-grey;
+				padding-right: .25em;
+	padding-left: .25em;
 			a.button {
 				position:relative;
 			}
@@ -841,6 +956,7 @@ footer {
 				p{margin-bottom:0px;}
 				.large-6.columns {
 					padding:0px;
+					border:0;
 				}
 			}
 			ul {
@@ -857,4 +973,40 @@ footer {
 	}
 }
 }
+//body h4 tag, not sure where it fits in the nest up there
+h4{
+padding:35px;	
+margin-right: .15em;
+color: $headerblue;
+@include transparent-gradient(white,#909090);
+@include shadow;
+}
+h5{
+	color:$dark-grey;
+	padding: 30px 35px 0px 35px;
+}
+//p tags for the bottom of the page, padding, and left and right borders
+p.dots{
+	color:black;
+	padding:0px 35px 0px 35px;
+}
+p.left1{
+	border-right:1px dotted black;
+	padding:0px 35px 0px 35px;
+	}	
+p.right1{
+	border-left:1px dotted black;
+	padding:0px 35px 0px 35px;
+	}
+//borders around the column images here
+.mainbord{
+	border:5px solid white;
+	@include shadow;
+}
+//to cut the padding between columns on the front page
+.padclass{
+	left:.8em;
+	padding-right: .25em;
+	padding-left: .25em;
 
+}

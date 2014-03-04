@@ -84,6 +84,7 @@ $topbar-sticky-class: ".sticky" !default;
 
   .top-bar {
     overflow: hidden;
+    margin-right:-5px;
     height: $topbar-height-large;
     line-height: $topbar-height;
     position: relative;
@@ -213,12 +214,14 @@ $topbar-sticky-class: ".sticky" !default;
 
   // Right and Left Navigation that stacked by default
   .top-bar-section {
+
     #{$default-float}: 0;
     position: relative;
     width: auto;
     @include single-transition($default-float, $topbar-transition-speed);
 
     ul {
+    margin-left:-5px;
       width: 100%;
       height: auto;
       display: block;
@@ -465,7 +468,7 @@ $topbar-sticky-class: ".sticky" !default;
       li {
         margin:0 20px;
         &:last-child {
-          margin-right:0px;
+          //margin-right:10px;//not needed for this project, cutting off the top nav
         }
         a:not(.button) {
           padding: 0px;

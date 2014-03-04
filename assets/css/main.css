@@ -133,8 +133,8 @@ select {
 .column,
 .columns {
   position: relative;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: .5em;
+  padding-right: .5em;
   width: 100%;
   float: left; }
 
@@ -142,8 +142,8 @@ select {
   .column,
   .columns {
     position: relative;
-    padding-left: 1em;
-    padding-right: 1em;
+    padding-left: .25em;
+    padding-right: .25em;
     float: left; }
 
   .small-1 {
@@ -1149,6 +1149,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
   font-style: normal;
   color: #58585b;
+  @include gradientreverse;
   text-rendering: optimizeLegibility;
   margin-top: 0.2em;
   margin-bottom: 0.8em;
@@ -4862,6 +4863,10 @@ header.page-header {
       font-family: 'FuturaLT-CondensedLight', 'HelveticaNeue', Helvetica, Arial, sans-serif;
       font-weight: normal;
       font-style: normal; }
+
+.logo{
+width:205px;
+}
 
 .row.inside .columns article ul.bios li {
   list-style: none;
