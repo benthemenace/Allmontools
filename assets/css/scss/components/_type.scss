@@ -28,7 +28,7 @@
 $include-html-type-classes: $include-html-classes !default;
 
 // We use these to control header font styles
-$header-font-family: 'FuturaLT-Condensed', 'HelveticaNeue', Helvetica, Arial, sans-serif !default;
+$header-font-family: 'Accord Alternate Regular', 'HelveticaNeue', Helvetica, Arial, sans-serif !default;
 $header-font-weight: normal !default;
 $header-font-style: normal !default;
 $header-font-color: $grey !default;
@@ -267,7 +267,7 @@ $microformat-abbr-font-decoration: none !default;
   b {
     font-weight: normal;
     line-height: inherit;
-    @include futura;
+    @include accord;
   }
 
   small {

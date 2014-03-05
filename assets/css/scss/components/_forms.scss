@@ -126,7 +126,7 @@ $glowing-effect-color: $input-focus-border-color !default;
     display: block;
     font-weight: $form-label-font-weight;
     margin-bottom: $form-label-bottom-margin;
-    @include futura-light;
+    @include accord-light;
   }
 
   // Alignment options
@@ -425,7 +425,7 @@ input[type="submit"] {
   color:$white;
   background-color:$blue;
   border-color:$blue;
-  @include futura-light;
+  @include accord-light;
   text-transform:uppercase;
   border:0px;
   font-size:16px;

@@ -111,18 +111,18 @@ background-color: rgb(216,216,216); // Old browsers
 
 // Fonts
 
-@mixin futura {
-  font-family: 'FuturaLT-Condensed', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+@mixin accord {
+  font-family: 'Accord Alternate Regular', 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
-@mixin futura-light {
-  font-family: 'FuturaLT-CondensedLight', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+@mixin accord-light {
+  font-family: 'Accord Alternate Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }
-@mixin futura-bold {
-  font-family: 'FuturaLT-CondensedBold', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+@mixin accord-bold {
+  font-family: 'Accord Alternate ExtraBold', 'HelveticaNeue', Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
 }

@@ -162,7 +162,7 @@
 								@include transparent-gradient(white,#909090);
 								padding: 20px 35px 10px 35px;
 								h1 {
-									font-size:50px;
+									font-size:40px;
 									margin:15px auto;
 								}
 							}
@@ -184,7 +184,7 @@
 											background-color:transparent;
 											border-color:$white;
 											letter-spacing: 1px;
-											@include futura-light;
+											@include accord-light;
 											font-size: 15px;
 										}
 									}
@@ -228,7 +228,7 @@
 					margin-bottom: 0;
 				}
 				p{
-					@include futura-light;
+					@include accord-light;
 					text-transform:uppercase;
 					font-size: 28px;
 					color:$grey;
@@ -237,7 +237,7 @@
 			}
 			.row {
 				 p {
-					@include futura-light;
+					@include accord-light;
 					color:$grey;
 					text-transform:none;
 					font-size: 19px;
@@ -250,7 +250,7 @@
 						a {
 							color:$grey;
 							border-color:$grey;
-							@include futura;
+							@include accord;
 							font-size: 15px;
 							text-transform:uppercase;
 						}
@@ -317,14 +317,14 @@
 							font-size: 14px;
 							h1 {
 								font-size: 19px;
-								@include futura;
+								@include accord;
 								margin-bottom: 5px;
 								text-transform: none;
 							}
 						}
 					}
 					.small.button.grey{
-						@include futura-light;
+						@include accord-light;
 						font-size:15px;
 						background-color:$grey;
 						color:$white;
@@ -348,7 +348,7 @@
 					}
 					p {font-size: 14px;}
 					ul.contact-list {
-					@include futura-light;
+					@include accord-light;
 					margin:0px;
 					font-size:17px;
 						li {
@@ -382,7 +382,7 @@
 					font-size:26px;
 					color:$grey;
 					text-transform:none;
-					@include futura-light;
+					@include accord-light;
 					margin-bottom: 5px;
 					&:after {
 						content: "—";
@@ -450,11 +450,11 @@
 								bottom:0px;
 								@include text-shadow;
 								position:absolute;
-								@include futura-light;
+								@include accord-light;
 								margin-bottom:0px;
 							}
 						}
-						p {@include futura-light;font-size:18px;line-height: 1.3;}
+						p {@include accord-light;font-size:18px;line-height: 1.3;}
 					}
 				}
 				.columns {
@@ -511,13 +511,13 @@ footer {
 	height:75px;
 	background-color:#006680;;
 	color:$light-grey;
-	@include futura-light;
+	@include accord-light;
 	font-size:16px;
 
 	.large-12.columns {
 		margin-top:25px;
 		ul li, p {
-			@include futura-light;
+			@include accord-light;
 			border:0;
 		}
 		.large-6.columns {
@@ -605,7 +605,7 @@ header.page-header {
 				}
 				li.toggle-topbar{
 					top: 55px;
-					@include futura;
+					@include accord;
 					a {font-size: 16px;}
 				}
 			}
@@ -761,7 +761,7 @@ header.page-header {
 				}
 				li.toggle-topbar{
 					top: 35px;
-					@include futura;
+					@include accord;
 					a {font-size: 16px;}
 				}
 			}

@@ -35,7 +35,7 @@ $side-nav-divider-color: darken(#fff, 10%) !default;
   padding: $side-nav-padding;
   list-style-type: $side-nav-list-type;
   list-style-position: $side-nav-list-position;
-  @include futura-light;
+  @include accord-light;
 
 
   li {
